@@ -1,24 +1,22 @@
-# README
+# Geo Location API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an API to determine whether an incoming geographical location is inside at least one of the given areas in GeoJSON format
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+1) `git clone ...`
+2) `cd geo-location-api`
+3) `bundle install`
+4) `rails s`
 
-* System dependencies
 
-* Configuration
+## Run
 
-* Database creation
+1) To fetch list of given areas in GEOJSON format, URL looks like: http://localhost:3000/areas #GET
 
-* Database initialization
+2) To check if the location is inside any of the given areas, URL looks like: http://localhost:3000/areas #POST
 
-* How to run the test suite
+## Test
 
-* Services (job queues, cache servers, search engines, etc.)
+`rspec`
 
-* Deployment instructions
-
-* ...

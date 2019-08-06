@@ -18,8 +18,8 @@ class GeoController < ApplicationController
 
   def inside
     begin
-      point_x = params[:points]['0'].to_f
-      point_y = params[:points]['1'].to_f
+      point_x = params[:point]['0'].to_f
+      point_y = params[:point]['1'].to_f
 
       @given_areas['features'].each do |feature_item|
         coordinates_array = feature_item['geometry']['coordinates'].first
@@ -45,12 +45,12 @@ class GeoController < ApplicationController
   end
 
   def is_type_point?
-    params[:points].keys.count == 2 # check if inputted point is an array of 2 elements i.e. x and y
+    params[:point].keys.count == 2 # check if inputted point is an array of 2 elements i.e. x and y
   end
 
   private
 
   def location_params
-    params.permit(:points)
+    params.permit(:point)
   end
 end
