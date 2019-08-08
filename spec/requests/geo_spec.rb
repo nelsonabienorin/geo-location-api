@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Todos API', type: :request do
+RSpec.describe 'Geo Locate API', type: :request do
   let(:parsed_response) { JSON.parse(response.body) }
 
   # Test suite for GET /areas
